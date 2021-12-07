@@ -11,7 +11,6 @@ pool:
 
 steps:
 - task: Maven@3
-  displayName: 'Maven test'
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
@@ -20,4 +19,4 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'test'
+    goals: 'package'
